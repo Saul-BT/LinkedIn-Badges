@@ -1,0 +1,933 @@
+/*
+  Author: Saúl Blanco Tejero
+  Alias: @elGolpista
+*/
+
+/* General style */
+
+body {
+  color: #3d3d3d;
+  text-align: center;
+  font-family: calibri, arial;
+}
+
+body > h1 {
+  font-size: 40px;
+  text-shadow: 0px 0px 5px #999999;
+}
+
+body > p {
+  font-size: 20px;
+}
+
+body > p > span {
+  font-family: monospace, courier;
+  font-size: 15px;
+  padding: 2px 4px;
+  background-color: #e6e6e6;
+  border-radius: 3px;
+}
+
+/* badges container */
+
+div.badges > div {
+  width: 76%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.badges > p {
+  color: #444444;
+}
+
+/* For clipboard */
+
+div.copy {
+  width: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+div.copy > i {
+  color: white;
+  background-color: #df9617;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 100%;
+}
+
+div.copy > textarea {
+  color: #c3b9d4;
+  background-color: #484f5d;
+  height: 30px;
+  padding: 5px;
+  outline-color: transparent;
+  border: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0px 0px 10px #2f343e;
+          box-shadow: inset 0px 0px 10px #2f343e;
+}
+
+div.copy > textarea:focus {
+  -webkit-box-shadow: 0px  0px 6px #df9617;
+          box-shadow: 0px  0px 6px #df9617;
+}
+
+div.badges > div > * {
+  margin: 8px;
+}
+
+/* SIMPLE BADGES */
+
+/* Simple badge with original color */
+
+a.original {
+  padding: 4px 8px 4px 10px;
+  font-size: 20px;
+  font-weight: 100;
+  text-decoration: none;
+  color: white;
+  -webkit-box-shadow: inset 2px 2px 8px rgba(75, 75, 75, 0.50);
+          box-shadow: inset 2px 2px 8px rgba(75, 75, 75, 0.50);
+  background-color: #0077b5;
+  border-radius: 7px;
+}
+a.original > i.fa-linkedin {
+  font-size: 15px;
+  vertical-align: middle;
+}
+a.original > i.fa-external-link {
+  font-size: 10px;
+  vertical-align: super;
+}
+a.original:hover {
+  background-color: #087fbd;
+  -webkit-box-shadow: 2px 2px 8px rgba(75, 75, 75, 0.50);
+          box-shadow: 2px 2px 8px rgba(75, 75, 75, 0.50);
+}
+a.original:active {
+  -webkit-box-shadow: 1px 1px 5px rgba(75, 75, 75, 0.50);
+          box-shadow: 1px 1px 5px rgba(75, 75, 105, 0.50);
+}
+
+/* Simple badge with teal color */
+
+a.teal {
+  padding: 4px 8px 4px 10px;
+  font-size: 20px;
+  font-weight: 100;
+  text-decoration: none;
+  color: white;
+  -webkit-box-shadow: inset 2px 2px 8px rgba(75, 75, 75, 0.50);
+          box-shadow: inset 2px 2px 8px rgba(75, 75, 75, 0.50);
+  background-color: #00897B;
+  border-radius: 7px;
+}
+a.teal > i.fa-linkedin {
+  font-size: 15px;
+  vertical-align: middle;
+}
+a.teal > i.fa-external-link {
+  font-size: 10px;
+  vertical-align: super;
+}
+a.teal:hover {
+  background-color: #018f80;
+  -webkit-box-shadow: 2px 2px 8px rgba(75, 75, 75, 0.50);
+          box-shadow: 2px 2px 8px rgba(75, 75, 75, 0.50);
+}
+a.teal:active {
+  -webkit-box-shadow: 1px 1px 5px rgba(75, 75, 75, 0.50);
+          box-shadow: 1px 1px 5px rgba(75, 75, 75, 0.50);
+}
+
+/* Simple badge with purple color */
+
+a.purple {
+  padding: 4px 8px 4px 10px;
+  font-size: 20px;
+  font-weight: 100;
+  text-decoration: none;
+  color: white;
+  -webkit-box-shadow: inset 2px 2px 8px rgba(75, 75, 75, 0.50);
+          box-shadow: inset 2px 2px 8px rgba(75, 75, 75, 0.5050);
+  background-color: #BA68C8;
+  border-radius: 7px;
+}
+a.purple > i.fa-linkedin {
+  font-size: 15px;
+  vertical-align: middle;
+}
+a.purple > i.fa-external-link {
+  font-size: 10px;
+  vertical-align: super;
+}
+a.purple:hover {
+  background-color: #c471d2;
+  -webkit-box-shadow: 2px 2px 8px rgba(75, 75, 75, 0.50);
+          box-shadow: 2px 2px 8px rgba(75, 75, 75, 0.50);
+}
+a.purple:active {
+  background-color: #c471d2;
+  -webkit-box-shadow: 1px 1px 5px rgba(75, 75, 75, 0.50);
+          box-shadow: 1px 1px 5px rgba(75, 75, 75, 0.50);
+}
+
+/* MEDIUM BADGES */
+
+/* Descriptive medium badge with original color */
+
+div.box-original {
+  text-align: center;
+  position: relative;
+  font-family: calibri, arial;
+  color: #b0b0b0;
+  background-color: #353b44;
+  width: 180px;
+  padding: 17px 5px 8px 5px;
+  border-radius: 3px;
+}
+
+div.box-original > div.logo {
+  color: #353b44;
+  background-color: #087fbd;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 6px 9px;
+  border-radius: 0 3px 0 0;
+}
+
+div.box-original > h3 {
+  position: absolute;
+  top: -15px;
+  left: 60px;
+}
+
+div.box-original > div.contenido {
+  text-align: left;
+  padding: 0 5px;
+}
+
+div.box-original > a {
+  font-weight: 600;
+  color: #353b44;
+  text-decoration: none;
+  background-color: #087fbd;
+  padding: 2px 5px;
+  border-radius: 1px;
+}
+
+/* Descriptive medium badge with teal color */
+
+div.box-teal {
+  text-align: center;
+  position: relative;
+  font-family: calibri, arial;
+  color: #b0b0b0;
+  background-color: #353b44;
+  width: 180px;
+  padding: 17px 5px 8px 5px;
+  border-radius: 3px;
+}
+
+div.box-teal > div.logo {
+  color: #353b44;
+  background-color: #018f80;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 6px 9px;
+  border-radius: 0 3px 0 0;
+}
+
+div.box-teal > h3 {
+  position: absolute;
+  top: -15px;
+  left: 60px;
+}
+
+div.box-teal > div.contenido {
+  text-align: left;
+  padding: 0 5px;
+}
+
+div.box-teal > a {
+  font-weight: 600;
+  color: #353b44;
+  text-decoration: none;
+  background-color: #018f80;
+  padding: 2px 5px;
+  border-radius: 1px;
+}
+
+/* Descriptive medium badge with purple color */
+
+div.box-purple {
+  text-align: center;
+  position: relative;
+  font-family: calibri, arial;
+  color: #b0b0b0;
+  background-color: #353b44;
+  width: 180px;
+  padding: 17px 5px 8px 5px;
+  border-radius: 3px;
+}
+
+div.box-purple > div.logo {
+  color: #353b44;
+  background-color: #c471d2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 6px 9px;
+  border-radius: 0 3px 0 0;
+}
+
+div.box-purple > h3 {
+  position: absolute;
+  top: -15px;
+  left: 60px;
+}
+
+div.box-purple > div.contenido {
+  text-align: left;
+  padding: 0 5px;
+}
+
+div.box-purple > a {
+  font-weight: 600;
+  color: #353b44;
+  text-decoration: none;
+  background-color: #c471d2;
+  padding: 2px 5px;
+  border-radius: 1px;
+}
+
+/* Descriptive medium badge with original color -- Other design */
+
+div.box_original {
+  text-align: center;
+  font-family: calibri, arial;
+  color: #b0b0b0;
+  background-color: #353b44;
+  width: 180px;
+  border-radius: 3px 3px 5px 5px;
+}
+
+div.box_original > div.header {
+  background-color: #087fbd;
+  width: 100%;
+  height: 25px;
+  border-radius: 3px 3px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.box_original > div.header > div.logo {
+  color: #353b44;
+  height: 100%;
+  margin-top: 10px;
+  border-radius: 3px 0 3px 0;
+  background-color: #087fbd;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+          -webkit-transition: margin-top .25s ease-in-out;
+          transition: margin-top .25s ease-in-out;
+}
+
+div.box_original > div.header > div.logo:hover {
+  margin-top: 25px;
+}
+
+div.box_original > div.header > h3 {
+  height: 100%;
+  background-color: #424a55;
+  border-radius: 0 3px 0 0;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+div.box_original > a {
+  display: block;
+  font-weight: 600;
+  padding: 5px 0 3px;
+  height: 24px;
+  width: 100%;
+  text-decoration: none;
+  color: #b0b0b0;
+  background-color: #424a55;
+  border-radius: 0 0 5px 5px;
+}
+
+div.box_original > a:hover {
+  color: #353b44;
+  background-color: #087fbd;
+}
+
+/* Descriptive medium badge with teal color -- Other design */
+
+div.box_teal {
+  text-align: center;
+  font-family: calibri, arial;
+  color: #b0b0b0;
+  background-color: #353b44;
+  width: 180px;
+  border-radius: 3px 3px 5px 5px;
+}
+
+div.box_teal > div.header {
+  background-color: #018f80;
+  width: 100%;
+  height: 25px;
+  border-radius: 3px 3px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.box_teal > div.header > div.logo {
+  color: #353b44;
+  height: 100%;
+  margin-top: 10px;
+  border-radius: 3px 0 3px 0;
+  background-color: #018f80;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+          -webkit-transition: margin-top .25s ease-in-out;
+          transition: margin-top .25s ease-in-out;
+}
+
+div.box_teal > div.header > div.logo:hover {
+  margin-top: 25px;
+}
+
+div.box_teal > div.header > h3 {
+  height: 100%;
+  background-color: #424a55;
+  border-radius: 0 3px 0 0;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+div.box_teal > a {
+  display: block;
+  font-weight: 600;
+  padding: 5px 0 3px;
+  height: 24px;
+  width: 100%;
+  text-decoration: none;
+  color: #b0b0b0;
+  background-color: #424a55;
+  border-radius: 0 0 5px 5px;
+}
+
+div.box_teal > a:hover {
+  color: #353b44;
+  background-color: #018f80;
+}
+
+/* Descriptive medium badge with purple color -- Other design */
+
+div.box_purple {
+  text-align: center;
+  font-family: calibri, arial;
+  color: #b0b0b0;
+  background-color: #353b44;
+  width: 180px;
+  border-radius: 3px 3px 5px 5px;
+}
+
+div.box_purple > div.header {
+  background-color: #c471d2;
+  width: 100%;
+  height: 25px;
+  border-radius: 3px 3px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.box_purple > div.header > div.logo {
+  color: #353b44;
+  height: 100%;
+  margin-top: 10px;
+  border-radius: 3px 0 3px 0;
+  background-color: #c471d2;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+          -webkit-transition: margin-top .25s ease-in-out;
+          transition: margin-top .25s ease-in-out;
+}
+
+div.box_purple > div.header > div.logo:hover {
+  margin-top: 25px;
+}
+
+div.box_purple > div.header > h3 {
+  height: 100%;
+  background-color: #424a55;
+  border-radius: 0 3px 0 0;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+div.box_purple > a {
+  display: block;
+  font-weight: 600;
+  padding: 5px 0 3px;
+  height: 24px;
+  width: 100%;
+  text-decoration: none;
+  color: #b0b0b0;
+  background-color: #424a55;
+  border-radius: 0 0 5px 5px;
+}
+
+div.box_purple > a:hover {
+  color: #353b44;
+  background-color: #c471d2;
+}
+
+/* LARGE BADGES */
+
+/* Descriptive large badge with original color */
+
+div.card-original {
+  font-family: calibri, arial;
+  text-align: center;
+  width: 180px;
+  color: #b0b0b0;
+  background-color: #353b44;
+  border-radius: 3px;
+}
+
+div.card-original > div.header {
+  height: 35px;
+  width: 100%;
+  background-color: #8ba3ad;
+  border-radius: 3px 3px 0 0;
+}
+
+div.card-original > div.header > i {
+  padding: 10px 13px;
+  color: #353b44;
+  background-color: #087fbd;
+  border-radius: 3px;
+  margin-top: 17px;
+}
+
+div.card-original > h3 {
+  margin-top: 30px;
+}
+
+div.card-original > hr {
+  width: 80%;
+  border: 1px solid #424953;
+}
+
+div.card-original > a {
+  display: block;
+  font-weight: 600;
+  padding: 5px 0 3px;
+  height: 24px;
+  width: 100%;
+  text-decoration: none;
+  color: #353b44;
+  background-color: #087fbd;
+  border-radius: 0 0 3px 3px;
+}
+
+/* Descriptive large badge with teal color */
+
+div.card-teal {
+  font-family: calibri, arial;
+  text-align: center;
+  width: 180px;
+  color: #b0b0b0;
+  background-color: #353b44;
+  border-radius: 3px;
+}
+
+div.card-teal > div.header {
+  height: 35px;
+  width: 100%;
+  background-color: #8ba3ad;
+  border-radius: 3px 3px 0 0;
+}
+
+div.card-teal > div.header > i {
+  padding: 10px 13px;
+  color: #353b44;
+  background-color: #018f80;
+  border-radius: 3px;
+  margin-top: 17px;
+}
+
+div.card-teal > h3 {
+  margin-top: 30px;
+}
+
+div.card-teal > hr {
+  width: 80%;
+  border: 1px solid #424953;
+}
+
+div.card-teal > a {
+  display: block;
+  font-weight: 600;
+  padding: 5px 0 3px;
+  height: 24px;
+  width: 100%;
+  text-decoration: none;
+  color: #353b44;
+  background-color: #018f80;
+  border-radius: 0 0 3px 3px;
+}
+
+/* Descriptive large badge with purple color */
+
+div.card-purple {
+  font-family: calibri, arial;
+  text-align: center;
+  width: 180px;
+  color: #b0b0b0;
+  background-color: #353b44;
+  border-radius: 3px;
+}
+
+div.card-purple > div.header {
+  height: 35px;
+  width: 100%;
+  background-color: #8ba3ad;
+  border-radius: 3px 3px 0 0;
+}
+
+div.card-purple > div.header > i {
+  padding: 10px 13px;
+  color: #353b44;
+  background-color: #c471d2;
+  border-radius: 3px;
+  margin-top: 17px;
+}
+
+div.card-purple > h3 {
+  margin-top: 30px;
+}
+
+div.card-purple > hr {
+  width: 80%;
+  border: 1px solid #424953;
+}
+
+div.card-purple > a {
+  display: block;
+  font-weight: 600;
+  padding: 5px 0 3px;
+  height: 24px;
+  width: 100%;
+  text-decoration: none;
+  color: #353b44;
+  background-color: #c471d2;
+  border-radius: 0 0 3px 3px;
+}
+
+/* Descriptive large badge with original color -- Other design */
+
+div.card_original {
+  font-family: calibri, arial;
+  position: relative;
+  width: 180px;
+  color: #b0b0b0;
+  background-color: #353b44;
+  border-left: 10px solid #282d34;
+  border-radius: 3px;
+}
+
+div.card_original > div.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9fc9c0;
+  border-radius: 0 3px 0 0;
+  padding: 8px;
+}
+
+div.card_original > div.header > * {
+  -webkit-box-shadow: -2px 2px 8px rgba(38, 38, 38, 0.50);
+          box-shadow: -2px 2px 8px rgba(38, 38, 38, 0.50);
+}
+
+div.card_original > div.header > img {
+  background-color: rgba(53, 59, 68, 0.5);
+  border-radius: 100%;
+}
+
+div.card_original > div.header > i {
+  color: #353b44;
+  background-color: #087fbd;
+  padding: 8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+}
+
+div.card_original > h3 {
+  text-align: center;
+}
+
+div.card_original > p {
+  text-align: left;
+  margin: 0 5px;
+  padding-bottom: 15px;
+}
+
+div.card_original > a {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-decoration: none;
+  font-size: 20px;
+  color: #353b44;
+  background-color: #087fbd;
+  padding: 7px 7px 5px 18px;
+  border-radius: 100% 0 3px 0;
+  -webkit-transition: padding .25s ease-in-out;
+  transition: padding .25s ease-in-out;
+}
+
+div.card_original > a:hover {
+  padding: 7px 5px 5px 20px;
+}
+
+/* Descriptive large badge with teal color -- Other design */
+
+div.card_teal {
+  font-family: calibri, arial;
+  position: relative;
+  width: 180px;
+  color: #b0b0b0;
+  background-color: #353b44;
+  border-left: 10px solid #282d34;
+  border-radius: 3px;
+}
+
+div.card_teal > div.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9fc9c0;
+  border-radius: 0 3px 0 0;
+  padding: 8px;
+}
+
+div.card_teal > div.header > * {
+  -webkit-box-shadow: -2px 2px 8px rgba(38, 38, 38, 0.50);
+          box-shadow: -2px 2px 8px rgba(38, 38, 38, 0.50);
+}
+
+div.card_teal > div.header > img {
+  background-color: rgba(53, 59, 68, 0.5);
+  border-radius: 100%;
+}
+
+div.card_teal > div.header > i {
+  color: #353b44;
+  background-color: #018f80;
+  padding: 8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+}
+
+div.card_teal > h3 {
+  text-align: center;
+}
+
+div.card_teal > p {
+  text-align: left;
+  margin: 0 5px;
+  padding-bottom: 15px;
+}
+
+div.card_teal > a {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-decoration: none;
+  font-size: 20px;
+  color: #353b44;
+  background-color: #018f80;
+  padding: 7px 7px 5px 18px;
+  border-radius: 100% 0 3px 0;
+  -webkit-transition: padding .25s ease-in-out;
+  transition: padding .25s ease-in-out;
+}
+
+div.card_teal > a:hover {
+  padding: 7px 5px 5px 20px;
+}
+
+/* Descriptive large badge with purple color -- Other design */
+
+div.card_purple {
+  font-family: calibri, arial;
+  position: relative;
+  width: 180px;
+  color: #b0b0b0;
+  background-color: #353b44;
+  border-left: 10px solid #282d34;
+  border-radius: 3px;
+}
+
+div.card_purple > div.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9fc9c0;
+  border-radius: 0 3px 0 0;
+  padding: 8px;
+}
+
+div.card_purple > div.header > * {
+  -webkit-box-shadow: -2px 2px 8px rgba(38, 38, 38, 0.50);
+          box-shadow: -2px 2px 8px rgba(38, 38, 38, 0.50);
+}
+
+div.card_purple > div.header > img {
+  background-color: rgba(53, 59, 68, 0.5);
+  border-radius: 100%;
+}
+
+div.card_purple > div.header > i {
+  color: #353b44;
+  background-color: #c471d2;
+  padding: 8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+}
+
+div.card_purple > h3 {
+  text-align: center;
+}
+
+div.card_purple > p {
+  text-align: left;
+  margin: 0 5px;
+  padding-bottom: 15px;
+}
+
+div.card_purple > a {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-decoration: none;
+  font-size: 20px;
+  color: #353b44;
+  background-color: #c471d2;
+  padding: 7px 7px 5px 18px;
+  border-radius: 100% 0 3px 0;
+  -webkit-transition: padding .25s ease-in-out;
+  transition: padding .25s ease-in-out;
+}
+
+div.card_purple > a:hover {
+  padding: 7px 5px 5px 20px;
+}
+
+
+/* Footer style */
+
+body > footer {
+  margin: 40px 0px 20px 0px;
+}
+
+body > footer > a {
+  text-decoration: none;
+  color: #ae54e8;
+}
