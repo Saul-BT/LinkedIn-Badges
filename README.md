@@ -1,7 +1,7 @@
 <h1 align="center">LinkedIn Badges</h1>
 LinkedIn badges for web pages.
 
-[live view](http://linkedin-badges.esy.es/)
+[live view](http://tthngs.000webhostapp.com/LinkedIn/LinkedIn/)
 
 <h3 align="center">Large Badges</h3>
 
